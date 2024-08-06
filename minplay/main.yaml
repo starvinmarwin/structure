@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  collections:
+    - netapp.ontap
+
+  vars:
+    - grid_admin_base_url: "https://grid-admin-url/"
+
+  tasks:
+    - include: tasks/get_tenantid_from_bucket.yaml
+    - include: tasks/get_tenant_users.yaml
+    - include: tasks/get_user_keys.yaml
