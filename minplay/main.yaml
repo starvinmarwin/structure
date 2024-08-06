@@ -3,6 +3,14 @@
   collections:
     - netapp.ontap
 
+  module_defaults:
+    group/netapp.ontap.netapp_ontap:
+      hostname: "{{ hostname }}"
+      username: admin
+      password: netapp123
+      https: true
+      validate_certs: false
+
   vars:
     - grid_admin_base_url: "https://grid-admin-url/"
 
