@@ -6,8 +6,8 @@
   module_defaults:
     group/netapp.ontap.netapp_ontap:
       hostname: "{{ hostname }}"
-      username: admin
-      password: netapp123
+      cert_filepath: name.pem
+      key_filepath: name.key
       https: true
       validate_certs: false
 
